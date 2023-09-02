@@ -9,7 +9,7 @@ namespace SampleWebApiAspNetCore.Helpers
         {
             using (var scope = app.Services.CreateScope())
             {
-                var dbContext = scope.ServiceProvider.GetRequiredService<FoodDbContext>();
+                var dbContext = scope.ServiceProvider.GetRequiredService<AnimeDbContext>();
                 var seedDataService = scope.ServiceProvider.GetRequiredService<ISeedDataService>();
 
                 seedDataService.Initialize(dbContext);
